@@ -14,4 +14,10 @@ export const fetchArticleById = (articleId) => {
   return api
           .get(`/articles/${articleId}`)
           .then(response => response.data.article[0]);
- }
+}
+
+export const fetchComments = (articleId) => {
+  return api
+          .get(`/articles/${articleId}/comments`)
+          .then(response => response.data.comments);
+}
