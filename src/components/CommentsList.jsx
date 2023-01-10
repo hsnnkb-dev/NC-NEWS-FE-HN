@@ -3,6 +3,7 @@ import CommentCard from './CommentCard';
 
 export default function CommentsList({ comments }) {
   const [ articleComments ] = useState(comments);
+  if (articleComments.length === 0) return <p className='No-Comments'>No Comments to display</p>
 
   return (
     <section className='CommentsList'>
