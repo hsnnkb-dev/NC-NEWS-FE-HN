@@ -69,6 +69,36 @@
   margin-bottom: 10px;
 }
 
+.CommentsList {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+.CommentCard {
+  font-size: 0.8rem;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+.CommentCard p {
+  line-height: 16px;
+}
+
+.CommentCard #content {
+  margin-bottom: 8px;
+}
+
+.No-Comments {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+
 .Loading {
   padding: 5px;
   border: 2px solid black;
