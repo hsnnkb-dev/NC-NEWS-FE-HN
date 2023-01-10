@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { fetchArticles } from "../utils/api";
 import ArticleCard from "./ArticleCard"
 
@@ -8,9 +9,9 @@ export default function ArticlesList() {
   useEffect(() => {
     setIsLoading(true);
     fetchArticles()
-      .then(data => {
+      .then(articlesData => {
+        setArticles(articlesData);
         setIsLoading(false);
-        setArticles(data)
       });
   }, []);
 
