@@ -50,7 +50,6 @@ export default function SingleArticle() {
         <p id='content'>{article.body}</p>
         <p>Topic - {article.topic}</p>
         <p>User: {article.author}</p>
-        <p>Comments: {article.comment_count}</p>
         
         <p>Votes: {article.votes + voteShift}</p>
         <button onClick={() => voteArticle(article.article_id, 1)}>upvote</button>
