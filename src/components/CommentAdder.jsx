@@ -16,6 +16,7 @@ export default function CommentAdder({comments, setComments, articleId}) {
       setCommentMessage(`You need to log-in before posting`);
     } else {
       setIsDisabled(true);
+      setCommentMessage(`Posting comment...`);
       postComment(articleId, commentText, username)
         .then(newComment => { 
           setComments(currentComments => [newComment[0], ...currentComments]);
