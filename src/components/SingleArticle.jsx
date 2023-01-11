@@ -9,7 +9,6 @@ export default function SingleArticle() {
   const [ article, setArticle ] = useState({});
   const [ comments, setComments ] = useState([]);
   const [ voteShift, setVoteShift ] = useState(0);
-  const [ hasVoted, setHasVoted ] = useState(false);
   const [ voteMessage, setVoteMessage ] = useState("");
   const { article_id: articleId } = useParams();
 
@@ -26,9 +25,8 @@ export default function SingleArticle() {
   , []);
   
   const voteArticle = (articleId, articleVote) => {
-    if (!hasVoted) {
+    if (!voteShift) {
       setVoteShift(currentVotes => currentVotes + articleVote);
-      setHasVoted(true);
       patchArticleVote(articleId, articleVote)
         .catch(() => {
           setVoteShift(currentVotes => currentVotes + (articleVote * -1))
