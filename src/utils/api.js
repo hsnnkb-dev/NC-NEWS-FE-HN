@@ -28,3 +28,10 @@ export const patchArticleVote = (articleId, articleVote) => {
           .patch(`/articles/${articleId}`, requestBody)
           .then(response => response.data.updatedArticle);
 }
+
+export const postComment = (articleId, commentText, username) => {
+  const requestBody = { username: username, body: commentText }
+  return api
+          .post(`/articles/${articleId}/comments`, requestBody)
+          .then(response => response.data.postedComment)
+}

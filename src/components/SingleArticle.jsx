@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { patchArticleVote, fetchArticleById, fetchComments } from '../utils/api';
+import { patchArticleVote, fetchArticleById, fetchComments, postComment } from '../utils/api';
 import CommentsList from './CommentsList';
 
 export default function SingleArticle() {
   const [ isLoading, setIsLoading ] = useState(true);
   const [ isError, setIsError ] = useState(false);
+
   const [ article, setArticle ] = useState({});
   const [ comments, setComments ] = useState([]);
+
   const [ voteShift, setVoteShift ] = useState(0);
   const [ voteMessage, setVoteMessage ] = useState("");
+
   const { article_id: articleId } = useParams();
 
   useEffect(() => {
@@ -48,12 +51,14 @@ export default function SingleArticle() {
         <p>Topic - {article.topic}</p>
         <p>User: {article.author}</p>
         <p>Comments: {article.comment_count}</p>
+        
         <p>Votes: {article.votes + voteShift}</p>
         <button onClick={() => voteArticle(article.article_id, 1)}>upvote</button>
         <button onClick={() => voteArticle(article.article_id, -1)}>downvote</button>
         {(voteMessage) ? <p className='VoteMessage'>{voteMessage}</p> : null}
+
       </section>
-      <CommentsList comments={comments} /> 
+      <CommentsList comments={comments} setComments={setComments} articleId={article.article_id}/> 
     </main>
   )
 }

@@ -36,7 +36,7 @@
   color: white;
 }
 
-.ArticleList h2{
+.ArticleList h2 {
   font-size: 1.5rem;
   text-decoration: underline;
 }
@@ -97,6 +97,45 @@
   border: 1px solid black;
   margin: 5px 10px;
   text-align: left;
+}
+
+.CommentAdder {
+  margin-top: 10px;
+  background-color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.CommentAdder input{
+  margin-left: 10px;
+  margin-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 25px;
+  width: 60%;
+}
+
+.CommentAdder button {
+  margin-right: 10px;
+  padding: 4px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.CommentAdder button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.CommentMessage {
+  padding: 2px;
+  margin: 0 20px 10px;
+  text-align: center;
+  font-size: small;
+  margin-bottom: 10px;
 }
 
 .CommentCard {
