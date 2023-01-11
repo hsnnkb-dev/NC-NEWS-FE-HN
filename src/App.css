@@ -1,3 +1,4 @@
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@
   text-align: center;
 }
 
+/* ================ Header ================ */
 .Header {
   background: black;
   color: white;
@@ -16,6 +18,8 @@
   text-align: left;
 }
 
+
+/* ================ Navigation ================ */
 .Navigation {
   text-align: left;
   margin: 10px 10px;
@@ -36,11 +40,15 @@
   color: white;
 }
 
+
+/* ================ ArticleList ================ */
 .ArticleList h2 {
   font-size: 1.5rem;
   text-decoration: underline;
 }
 
+
+/* ================ ArticleCard ================ */
 .ArticleCard {
   padding: 5px;
   border: 2px solid black;
@@ -53,6 +61,8 @@
   opacity: 85%;
 }
 
+
+/* ================ SingleArticle ================ */
 .SingleArticle {
   padding: 10px;
   border: 2px solid black;
@@ -92,6 +102,8 @@
   margin-bottom: 10px;
 }
 
+
+/* ================ CommentsList ================ */
 .CommentsList {
   padding: 10px;
   border: 1px solid black;
@@ -99,6 +111,8 @@
   text-align: left;
 }
 
+
+/* ================ CommentAdder ================ */
 .CommentAdder {
   margin-top: 10px;
   background-color:white;
@@ -130,6 +144,13 @@
   color: white;
 }
 
+.NoComments {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+
 .CommentMessage {
   padding: 2px;
   margin: 0 20px 10px;
@@ -138,6 +159,8 @@
   margin-bottom: 10px;
 }
 
+
+/* ================ CommentCard ================ */
 .CommentCard {
   font-size: 0.8rem;
   padding: 5px;
@@ -154,13 +177,8 @@
   margin-bottom: 8px;
 }
 
-.No-Comments {
-  padding: 5px;
-  border: 1px solid black;
-  margin: 5px 10px;
-  font-size: 1.2rem;
-}
 
+/* ================ Loading / Error messages ================ */
 .Loading {
   padding: 5px;
   border: 2px solid black;

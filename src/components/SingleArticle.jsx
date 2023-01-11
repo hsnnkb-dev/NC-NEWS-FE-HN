@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { patchArticleVote, fetchArticleById, fetchComments, postComment } from '../utils/api';
+import { patchArticleVote, fetchArticleById, fetchComments } from '../utils/api';
 import CommentsList from './CommentsList';
 
 export default function SingleArticle() {

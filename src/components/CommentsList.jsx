@@ -2,7 +2,7 @@ import CommentAdder from './CommentAdder';
 import CommentCard from './CommentCard';
 
 export default function CommentsList({ comments, setComments, articleId}) {
-  if (comments.length === 0) return <p className='No-Comments'>No Comments to display</p>
+  if (comments.length === 0) return <p className='NoComments'>No Comments to display</p>
 
   return (
     <section className='CommentsList'>
