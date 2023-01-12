@@ -12,7 +12,7 @@ export default function ArticlesList() {
   const sortQuery = searchParams.get('sort_by');
   const [ sortBy, setSortBy ] = useState(sortQuery || "created_at");
   const [ orderBy, setOrderBy ] = useState(orderQuery || "desc");
-  
+
   const { topic } = useParams();
 
   useEffect(() => {
@@ -50,7 +50,6 @@ export default function ArticlesList() {
           <option disabled>Sort By</option>
           <option value="author">User</option>
           <option value="created_at">Created At</option>
-          <option value="topic">Topic</option>
           <option value="title">Title</option>
           <option value="votes">Votes</option>
         </select>
