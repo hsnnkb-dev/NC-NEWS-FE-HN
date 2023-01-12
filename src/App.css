@@ -19,7 +19,7 @@ h2, h3, h4 {
   font-weight: 100;
 }
 
-.Link, button {
+.Link, button, select {
   font-weight: bold;
 }
 
@@ -97,6 +97,36 @@ h2, h3, h4 {
   margin-left: 10px;
   font-size: 1.5rem;
   text-decoration: underline;
+}
+
+.ArticleList select {
+  margin-right: 6px;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px;
+  display: block;
+}
+
+.ArticleList select option {
+  background-color: white;
+  color: black;
+}
+
+.ArticleList select option:disabled{
+  background-color: white;
+  color: grey;
+}
+
+.ArticleList select:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.ArticleList .SortAndOrder {
+  margin: 2px 0 8px 10px;
+  display: flex;
 }
 
 

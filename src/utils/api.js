@@ -4,8 +4,12 @@ const api = axios.create({
   baseURL: "https://yesterdays-news.onrender.com/api"
 })
 
-export const fetchArticles = (topic) => {
-  const params = { params: { topic: topic } }
+export const fetchArticles = (topic, sortBy, orderBy) => {
+  const params = { params: 
+    { topic: topic, 
+      sort_by: sortBy,
+      order: orderBy
+    }}
   return api
           .get('/articles', params)
           .then(response => response.data.articles);
