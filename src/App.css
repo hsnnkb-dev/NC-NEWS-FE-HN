@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +11,41 @@
 
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
+h2, h3, h4 {
+  font-family: 'Bungee', cursive;
+  font-weight: 100;
+}
+
+/* ================ Header ================ */
 .Header {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   margin: auto;
   padding: 10px;
   text-align: left;
 }
 
+.Header h1 {
+  font-size: 2.2rem;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.Header hr {
+  border: 1px solid black;
+  margin-top: 7px;
+}
+
+.Header p {
+  margin-top: 4px;
+  text-align: center;
+  font-size: small;
+}
+
+
+/* ================ Navigation ================ */
 .Navigation {
   text-align: left;
   margin: 10px 10px;
@@ -23,7 +53,7 @@
 }
 
 .Navigation .Link {
-  margin: 0 3px;
+  margin: 0 3px 3px;
   padding: 4px;
   border: 1px solid black;
   border-radius: 2px;
@@ -36,11 +66,15 @@
   color: white;
 }
 
-.ArticleList h2{
+
+/* ================ ArticleList ================ */
+.ArticleList h2 {
   font-size: 1.5rem;
   text-decoration: underline;
 }
 
+
+/* ================ ArticleCard ================ */
 .ArticleCard {
   padding: 5px;
   border: 2px solid black;
@@ -53,6 +87,8 @@
   opacity: 85%;
 }
 
+
+/* ================ SingleArticle ================ */
 .SingleArticle {
   padding: 10px;
   border: 2px solid black;
@@ -92,6 +128,8 @@
   margin-bottom: 10px;
 }
 
+
+/* ================ CommentsList ================ */
 .CommentsList {
   padding: 10px;
   border: 1px solid black;
@@ -99,6 +137,56 @@
   text-align: left;
 }
 
+
+/* ================ CommentAdder ================ */
+.CommentAdder {
+  margin-top: 10px;
+  background-color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.CommentAdder textarea {
+  margin-left: 10px;
+  margin-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 25px;
+  width: 60%;
+}
+
+.CommentAdder button {
+  margin-right: 10px;
+  padding: 4px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.CommentAdder button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.NoComments {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.CommentMessage {
+  padding: 2px;
+  margin: 0 20px 10px;
+  text-align: center;
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+
+/* ================ CommentCard ================ */
 .CommentCard {
   font-size: 0.8rem;
   padding: 5px;
@@ -115,13 +203,8 @@
   margin-bottom: 8px;
 }
 
-.No-Comments {
-  padding: 5px;
-  border: 1px solid black;
-  margin: 5px 10px;
-  font-size: 1.2rem;
-}
 
+/* ================ Loading / Error messages ================ */
 .Loading {
   padding: 5px;
   border: 2px solid black;
