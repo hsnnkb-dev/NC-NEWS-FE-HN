@@ -259,6 +259,19 @@ h2, h3, h4 {
   margin-bottom: 8px;
 }
 
+.CommentCard .DeleteComment {
+  text-align: right;
+  padding: 4px;
+  background-color: #FF6663;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.CommentCard .DeleteComment:hover {
+  cursor: pointer;
+  color: white;
+}
+
 
 /* ================ Loading / Error messages ================ */
 .Loading {

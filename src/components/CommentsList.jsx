@@ -8,7 +8,7 @@ export default function CommentsList({ comments, setComments, articleId}) {
       <h3>Comments: {comments.length}</h3>
       <CommentAdder comments={comments} setComments={setComments} articleId={articleId}/>
       {(comments.length) ? 
-        comments.map(comment => <CommentCard comment={comment} key={comment.comment_id}/>) : 
+        comments.map(comment => <CommentCard setComments={setComments} comment={comment} key={comment.comment_id}/>) : 
         <p className='NoComments'>No Comments to display...</p>
       }
     </section>

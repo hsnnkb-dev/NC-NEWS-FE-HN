@@ -20,7 +20,7 @@ export default function CommentAdder({comments, setComments, articleId}) {
       postComment(articleId, commentText, username)
         .then(newComment => { 
           setComments(currentComments => [newComment[0], ...currentComments]);
-          setCommentMessage(`Comment '${commentText}' succesfully posted!`);
+          setCommentMessage(`Comment '${commentText}' successfully posted!`);
           setCommentText("");
           setIsDisabled(false)
         })
