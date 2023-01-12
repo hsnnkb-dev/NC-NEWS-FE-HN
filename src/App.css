@@ -38,6 +38,12 @@ h2, h3, h4 {
   margin-top: 7px;
 }
 
+.Header p {
+  margin-top: 4px;
+  text-align: center;
+  font-size: small;
+}
+
 
 /* ================ Navigation ================ */
 .Navigation {
@@ -141,7 +147,7 @@ h2, h3, h4 {
   align-items: flex-start;
 }
 
-.CommentAdder input{
+.CommentAdder textarea {
   margin-left: 10px;
   margin-bottom: 8px;
   border: 1px solid black;
