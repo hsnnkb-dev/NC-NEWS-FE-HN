@@ -4,10 +4,11 @@ const api = axios.create({
   baseURL: "https://yesterdays-news.onrender.com/api"
 })
 
-export const fetchArticles = () => {
- return api
-         .get('/articles')
-         .then(response => response.data.articles);
+export const fetchArticles = (topic) => {
+  const params = { params: { topic: topic } }
+  return api
+          .get('/articles', params)
+          .then(response => response.data.articles);
 }
 
 export const fetchArticleById = (articleId) => {
@@ -34,4 +35,10 @@ export const postComment = (articleId, commentText, username) => {
   return api
           .post(`/articles/${articleId}/comments`, requestBody)
           .then(response => response.data.postedComment)
+}
+
+export const fetchTopics = () => {
+  return api
+          .get('/topics')
+          .then(response => response.data.topics)
 }
