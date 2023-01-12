@@ -19,6 +19,10 @@ h2, h3, h4 {
   font-weight: 100;
 }
 
+.Link, button {
+  font-weight: bold;
+}
+
 /* ================ Header ================ */
 .Header {
   background: white;
@@ -66,9 +70,31 @@ h2, h3, h4 {
   color: white;
 }
 
+/* ================ Topics ================ */
+.Topics {
+  margin: 16px 0;
+}
+
+.Topics h3 {
+  margin-left: 2px;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.Topics article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Topics .Link {
+  font-size: small;
+}
+
 
 /* ================ ArticleList ================ */
 .ArticleList h2 {
+  text-align: left;
+  margin-left: 10px;
   font-size: 1.5rem;
   text-decoration: underline;
 }
