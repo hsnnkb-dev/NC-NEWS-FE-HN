@@ -6,6 +6,7 @@ import ArticleCard from "./ArticleCard"
 export default function ArticlesList() {
   const [ articles, setArticles ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(true);
+  const [ isError, setIsError ] = useState(false);
 
   const [ searchParams, setSearchParams ] = useSearchParams();
   const orderQuery = searchParams.get('order');
@@ -17,11 +18,13 @@ export default function ArticlesList() {
 
   useEffect(() => {
     setIsLoading(true);
+    setIsError(false);
     fetchArticles(topic, sortBy, orderBy)
       .then(articlesData => {
         setArticles(articlesData);
         setIsLoading(false);
-      });
+      })
+      .catch(() => setIsError(true));
   }, [topic, sortBy, orderBy]);
 
   const handleSort = (event) => {
@@ -36,7 +39,8 @@ export default function ArticlesList() {
     setSearchParams(params);
   }
 
-  if (isLoading) return <p className="Loading">Loading content...</p>
+  if (isError) return <p className="Error">404 - Articles not found</p>
+  if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
     <main className="ArticleList">

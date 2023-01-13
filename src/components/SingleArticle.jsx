@@ -23,8 +23,8 @@ export default function SingleArticle() {
       .catch(() => setIsError(true))}
   , []);
   
-  if (isError) return <p className="Error">Something went wrong 😞</p>
-  if (isLoading) return <p className="Loading">Loading content...</p>
+  if (isError) return <p className="Error">404 - Article not found</p>
+  if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
     <main>

@@ -2,20 +2,31 @@ import { useState } from "react";
 import { postComment } from '../utils/api';
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
+import { toast } from 'react-toastify'; 
 
 export default function CommentAdder({comments, setComments, articleId}) {
   const [ commentText, setCommentText ] = useState("");
   const { currentUser } = useContext(UserContext);
   const [ commentMessage, setCommentMessage ] = useState("");
   const [ isDisabled, setIsDisabled ] = useState(false);
+  const toastConfig = {
+    position: "bottom-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    progress: undefined,
+    theme: "dark",
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
     if (commentText === "") {
-      setCommentMessage(`Cannot leave comment blank`);
+      toast('Cannot leave the comment blank', toastConfig);
     } else if (currentUser.username === "Guest") {
-      setCommentMessage(`You need to log-in before posting`);
+      toast(`You need to log-in before posting`, toastConfig)
     } else {
       setIsDisabled(true);
       setCommentMessage(`Posting comment...`);
