@@ -36,7 +36,7 @@ export default function ArticlesList() {
     setSearchParams(params);
   }
 
-  if (isLoading) return <p className="Loading">Loading content...</p>
+  if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
     <main className="ArticleList">

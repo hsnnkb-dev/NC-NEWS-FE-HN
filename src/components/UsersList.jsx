@@ -4,10 +4,20 @@ import UserCard from "./UserCard";
 
 export default function UsersList() {
   const [ users, setUsers ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(true);
+  const [ isError, setIsError ] = useState(false);
+
   useEffect(() => {
     fetchUsers()
-      .then(response => setUsers(response))
+      .then(response => {
+        setUsers(response);
+        setIsLoading(false)
+      })
+      .catch(() => setIsError(true))
   })
+
+  if (isError) return <p className="Error">Something went wrong 😞</p>
+  if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
     <main className="UsersList">

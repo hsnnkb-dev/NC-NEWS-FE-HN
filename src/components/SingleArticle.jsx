@@ -24,7 +24,7 @@ export default function SingleArticle() {
   , []);
   
   if (isError) return <p className="Error">Something went wrong 😞</p>
-  if (isLoading) return <p className="Loading">Loading content...</p>
+  if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
     <main>
