@@ -11,7 +11,7 @@ export default function ArticleVote({ article }) {
   const toastConfig = {
     position: "bottom-center",
     autoClose: 2000,
-    hideProgressBar: true,
+    hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: false,
     draggable: false,

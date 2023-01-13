@@ -22,7 +22,9 @@ export default function UsersList() {
   return (
     <main className="UsersList">
       <h2>All Users - {users.length}</h2>
-      {users.map(user => <UserCard user={user} key={user.username} />)}
+      <section>
+        {users.map(user => <UserCard user={user} key={user.username} />)}
+      </section>
     </main>
   )
 }
