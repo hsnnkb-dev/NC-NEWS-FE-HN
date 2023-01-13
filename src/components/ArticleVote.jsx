@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { patchArticleVote } from '../utils/api';
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 
 export default function ArticleVote({ article }) {
-
+  const { currentUser } = useContext(UserContext);
   const [ voteShift, setVoteShift ] = useState(0);
   const [ voteMessage, setVoteMessage ] = useState("");
 
   const voteArticle = (articleId, articleVote) => {
-    if (!voteShift) {
+    if (currentUser.username === "Guest") {
+      setVoteMessage("You need to log in first!")
+    } else if (!voteShift && currentUser.username !== "Guest") {
       setVoteShift(currentVotes => currentVotes + articleVote);
       patchArticleVote(articleId, articleVote)
         .catch(() => {
