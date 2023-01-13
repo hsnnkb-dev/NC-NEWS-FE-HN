@@ -16,6 +16,7 @@ export default function ArticleVote({ article }) {
     pauseOnHover: false,
     draggable: false,
     progress: undefined,
+    theme: 'dark'
   }
 
   const voteArticle = (articleId, articleVote) => {
