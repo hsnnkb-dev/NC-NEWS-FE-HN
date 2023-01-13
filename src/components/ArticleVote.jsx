@@ -21,8 +21,8 @@ export default function ArticleVote({ article }) {
   return (
     <section className='ArticleVote'>
       <p>Votes: {article.votes + voteShift}</p>
-      <button onClick={() => voteArticle(article.article_id, 1)}>upvote</button>
-      <button onClick={() => voteArticle(article.article_id, -1)}>downvote</button>
+      <button id="upvote" onClick={() => voteArticle(article.article_id, 1)}>upvote</button>
+      <button id="downvote" onClick={() => voteArticle(article.article_id, -1)}>downvote</button>
       {(voteMessage) ? <p className='VoteMessage'>{voteMessage}</p> : null}
     </section>
   )

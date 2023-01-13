@@ -46,3 +46,11 @@ export const fetchTopics = () => {
           .get('/topics')
           .then(response => response.data.topics)
 }
+
+export const deleteComment = (commentId) => api.delete(`/comments/${commentId}`)
+
+export const fetchUsers = () => {
+  return api
+          .get(`/users`)
+          .then(response => response.data.users)
+}

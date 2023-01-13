@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { useSearchParams, useParams } from "react-router-dom";
 import { fetchArticles } from "../utils/api";
 import ArticleCard from "./ArticleCard"
-import { useSearchParams, useParams } from "react-router-dom";
 
 export default function ArticlesList() {
   const [ articles, setArticles ] = useState([]);
@@ -64,9 +64,7 @@ export default function ArticlesList() {
           </select>
       </section>
       
-      {articles.map(article => {
-        return <ArticleCard article={article} key={article.article_id} />
-      })}
+      {articles.map(article => <ArticleCard article={article} key={article.article_id} />)}
     </main>
   )
 }
