@@ -2,15 +2,26 @@ import { useState } from 'react';
 import { patchArticleVote } from '../utils/api';
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
+import { toast } from 'react-toastify';
 
 export default function ArticleVote({ article }) {
   const { currentUser } = useContext(UserContext);
   const [ voteShift, setVoteShift ] = useState(0);
   const [ voteMessage, setVoteMessage ] = useState("");
+  const toastConfig = {
+    position: "bottom-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    progress: undefined,
+    theme: "dark",
+  }
 
   const voteArticle = (articleId, articleVote) => {
     if (currentUser.username === "Guest") {
-      setVoteMessage("You need to log in first!")
+      toast('You need to log in first!', toastConfig);
     } else if (!voteShift && currentUser.username !== "Guest") {
       setVoteShift(currentVotes => currentVotes + articleVote);
       patchArticleVote(articleId, articleVote)
@@ -19,7 +30,7 @@ export default function ArticleVote({ article }) {
           setVoteMessage("Something went wrong with voting")
         });
     } else {
-      setVoteMessage("You can only vote once")
+      toast('You can only vote once', toastConfig);
     }
   }
   return (

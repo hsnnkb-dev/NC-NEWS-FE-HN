@@ -342,6 +342,14 @@ h2, h3, h4 {
 }
 
 
+/* ================ NotFoundCard ================ */
+.NotFoundCard {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+  box-shadow: 0.2rem 0.2rem black;
+}
 
 
 /* ================ Loading / Error messages ================ */
