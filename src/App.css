@@ -33,43 +33,38 @@ h2, h3, h4 {
   margin: auto;
   padding: 10px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header .Profile {
+  text-align: center;
 }
 
 .Header h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: 'Bungee Shade', cursive;
 }
 
 .Header img {
+  text-align: center;
+  margin-top: 4px;
   border: 2px solid black;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 44px;
+  width: 44px;
   padding: 1px;
 }
 
-.Header hr {
-  border: 1px solid black;
-  margin-top: 7px;
-}
-
 .Header p {
-  margin-top: 4px;
   text-align: center;
   font-size: small;
 }
 
-.Login {
-  margin: 10px 50px;
+.Header span {
+  font-weight: bolder;
   text-align: center;
-  border: 2px solid black;
-  padding: 2px;
-  line-height: 10px;
-  background-color: white;
-}
-
-.Login span {
-  font-weight: bold;
+  font-size: x-small;
 }
 
 

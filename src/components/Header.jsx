@@ -7,11 +7,9 @@ export default function Header() {
   return (
     <header className="Header">
       <h1>Yesterday's <br></br> News</h1>
-      <hr />
-      <div className="Login">
+      <div className="Profile">
         <img src={currentUser.avatar_url} alt={`${currentUser.username} profile`} />
-        <p>Logged in as <span>{currentUser.username}</span></p>              
-        <p>Hello {currentUser.name}</p>
+        <p><span>{currentUser.username}</span></p>
       </div>
     </header>
   )
