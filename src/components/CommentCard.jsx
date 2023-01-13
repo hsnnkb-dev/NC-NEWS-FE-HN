@@ -3,7 +3,7 @@ import { UserContext } from "../contexts/UserContext";
 import { deleteComment } from "../utils/api";
 
 export default function CommentCard({ comment, setComments }) {
-  const { user } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
   const [ isDisabled, setIsDisabled ] = useState(false);
 
   const handleDelete = () => {
@@ -26,7 +26,7 @@ export default function CommentCard({ comment, setComments }) {
       <p id='content'>{comment.body}</p>
       <p>User: {comment.author}</p>
       <p>Votes: {comment.votes}</p>
-      {(user === comment.author) ? 
+      {(currentUser.username === comment.author) ? 
         <button 
         disabled={isDisabled}
         className="DeleteComment"

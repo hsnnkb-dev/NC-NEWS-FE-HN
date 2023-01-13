@@ -6,13 +6,15 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import ArticlesList from './components/ArticlesList';
 import SingleArticle from './components/SingleArticle';
+import UsersList from './components/UsersList';
+import profile from "./images/default.jpg";
 
 function App() {
-  const [ user, setUser ] = useState("weegembump");
+  const [ currentUser, setCurrentUser ] = useState({ username: "Guest", name: "Guester McGuesterson", avatar_url: profile});
   
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ user, setUser }} >
+      <UserContext.Provider value={{ currentUser, setCurrentUser }} >
         <div className="App">
           <Header />
           <Navigation />
@@ -21,6 +23,7 @@ function App() {
             <Route path="/articles" element={<ArticlesList />} />
             <Route path="/articles/topic/:topic" element={<ArticlesList />} />
             <Route path="/articles/id/:article_id" element={<SingleArticle />} />
+            <Route path="/users" element={<UsersList />} />
           </Routes>
         </div>
       </UserContext.Provider>
