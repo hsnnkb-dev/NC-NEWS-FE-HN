@@ -16,11 +16,11 @@ export default function ArticleVote({ article }) {
     pauseOnHover: false,
     draggable: false,
     progress: undefined,
-    theme: "dark",
   }
 
   const voteArticle = (articleId, articleVote) => {
     if (currentUser.username === "Guest") {
+      console.log('You need to log in first!')
       toast('You need to log in first!', toastConfig);
     } else if (!voteShift && currentUser.username !== "Guest") {
       setVoteShift(currentVotes => currentVotes + articleVote);

@@ -39,7 +39,7 @@ export default function ArticlesList() {
     setSearchParams(params);
   }
 
-  if (isError) return <p className="Error">Something went wrong 😞</p>
+  if (isError) return <p className="Error">404 - Articles not found</p>
   if (isLoading) return <p className="Loading">Loading content</p>
 
   return (
