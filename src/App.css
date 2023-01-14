@@ -86,6 +86,7 @@ h2, h3, h4 {
 }
 
 .Navigation .Link:hover {
+  transition: all 100ms linear;
   background-color: black;
   color: #FAF9F6;
 }
@@ -158,10 +159,16 @@ h2, h3, h4 {
   box-shadow: 0.2rem 0.2rem black;
 }
 
-.ArticleCard h3:hover {
-  text-decoration: underline;
+.ArticleCard:hover {
   cursor: pointer;
-  opacity: 85%;
+  transform: translateY(3px);
+  background-color: #f1eee6;
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
+.ArticleCard:hover > h3 {
+  text-decoration: underline;
 }
 
 
@@ -231,25 +238,27 @@ h2, h3, h4 {
 /* ================ CommentAdder ================ */
 .CommentAdder {
   margin-top: 10px;
-  background-color:#FAF9F6;
+  background-color: #FAF9F6;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap
 }
 
 .CommentAdder textarea {
   background-color: #ffffff;
   margin-left: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   padding: 3px;
   border: 2px solid black;
   border-radius: 2px;
   height: 26px;
-  width: 60%;
+  width: 95%;
 }
 
 .CommentAdder button {
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
   padding: 4px;
   background-color: #9EE09E;
   border: 2px solid black;
@@ -287,6 +296,12 @@ h2, h3, h4 {
   box-shadow: 0.15rem 0.15rem black;
 }
 
+.CommentCard:hover {
+  transform: translateY(1px);
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
 .CommentCard p {
   line-height: 16px;
 }
@@ -319,7 +334,6 @@ h2, h3, h4 {
 
 /* ================ UserCard ================ */
 .UserCard {
-  height: fit-content;
   padding: 5px;
   border: 2px solid black;
   margin: 8px 10px ;
@@ -330,15 +344,22 @@ h2, h3, h4 {
   box-shadow: 0.2rem 0.2rem black;
 }
 
-.UserCard h3:hover {
-  text-decoration: underline;
+.UserCard:hover  { 
   cursor: pointer;
-  opacity: 85%;
+  transform: translateY(3px);
+  background-color: #f1eee6;
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
+.UserCard:hover > div > h3 {
+  text-decoration: underline;
 }
 
 .UserCard img {
   border: 1px solid black;
   border-radius: 2px;
+  background-color: white;
   height: 64px;
   width: 64px;
   padding: 5px;

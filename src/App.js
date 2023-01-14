@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { UserContext } from './contexts/UserContext';
 import { Toaster } from 'react-hot-toast';
-//import { ToastContainer } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import Home from './components/Home';
 import ArticlesList from './components/ArticlesList';
 import SingleArticle from './components/SingleArticle';
 import UsersList from './components/UsersList';
@@ -23,7 +22,7 @@ function App() {
           <Header />
           <Navigation />
           <Routes>
-            <Route path="/"/>
+            <Route path="/" element={<Home />}/>
             <Route path="/articles" element={<ArticlesList />} />
             <Route path="/articles/topic/:topic" element={<ArticlesList />} />
             <Route path="/articles/id/:article_id" element={<SingleArticle />} />

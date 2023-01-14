@@ -22,6 +22,7 @@ export default function UsersList() {
   return (
     <main className="UsersList">
       <h2>All Users - {users.length}</h2>
+      <p>Login by clicking a username below</p>
       <section>
         {users.map(user => <UserCard user={user} key={user.username} />)}
       </section>

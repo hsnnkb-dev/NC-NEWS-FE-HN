@@ -20,7 +20,6 @@ export default function ArticleVote({ article }) {
 
   const voteArticle = (articleId, articleVote) => {
     if (currentUser.username === "Guest") {
-      console.log('You need to log in first!')
       toast('You need to log in first!', toastStyle);
     } else if (!voteShift && currentUser.username !== "Guest") {
       setVoteShift(currentVotes => currentVotes + articleVote);
@@ -30,7 +29,7 @@ export default function ArticleVote({ article }) {
           setVoteMessage("Something went wrong with voting")
         });
     } else {
-      toast('You can only vote once');
+      toast('You can only vote once', toastStyle);
     }
   }
   return (
