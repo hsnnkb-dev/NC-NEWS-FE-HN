@@ -2,8 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { UserContext } from './contexts/UserContext';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
+//import { ToastContainer } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import ArticlesList from './components/ArticlesList';
@@ -29,7 +30,9 @@ function App() {
             <Route path="/users" element={<UsersList />} />
             <Route path="/*" element={<NotFoundCard />} />
           </Routes>
-          <ToastContainer className={"ToastContainer"}/>
+          <Toaster
+          position="bottom-center"
+          reverseOrder={true}/>
         </div>
       </UserContext.Provider>
     </BrowserRouter>
