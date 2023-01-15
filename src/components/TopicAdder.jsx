@@ -32,7 +32,7 @@ export default function TopicAdder() {
           setTopicSlug("");
           setTopicDescription("");
           setCurrentTopics(currentTopics => [...currentTopics, newTopic[0]]);
-          toast(`Topic: '${topicSlug}', successfully posted!`, toastStyle);
+          toast(`Topic: '${topicSlug}' successfully posted!`, toastStyle);
           setIsDisabled(false);
         })
         .catch(() => {
