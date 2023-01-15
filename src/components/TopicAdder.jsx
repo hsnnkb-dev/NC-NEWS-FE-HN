@@ -9,7 +9,7 @@ export default function TopicAdder() {
   const [ topicSlug , setTopicSlug ] = useState("");
   const [ topicDescription , setTopicDescription ] = useState("");
   const { currentUser } = useContext(UserContext);
-  const { currentTopics, setCurrentTopics } = useContext(TopicContext);
+  const { setCurrentTopics } = useContext(TopicContext);
   const toastStyle = {
     style: {
       border: '2px solid black',
@@ -29,11 +29,15 @@ export default function TopicAdder() {
     } else {
       postTopic(topicSlug, topicDescription)
         .then(newTopic => {
-          console.log(newTopic)
+          setTopicSlug("");
+          setTopicDescription("");
           setCurrentTopics(currentTopics => [...currentTopics, newTopic[0]]);
+          toast(`Topic: '${topicSlug}', successfully posted!`, toastStyle);
           setIsDisabled(false);
         })
         .catch(() => {
+          setTopicSlug("");
+          setTopicDescription("");
           toast(`Could not post topic, try again later`, toastStyle);
           setIsDisabled(false);
         })
@@ -42,8 +46,8 @@ export default function TopicAdder() {
 
 
   return (
-    <section>
-      <h3>Post a Topic</h3>
+    <section className="TopicAdderCard">
+      <h2>Post a Topic</h2>
       <form className="TopicAdder" onSubmit={event => handleSubmit(event)}>
             <input
               placeholder="Topic Title"
@@ -57,7 +61,6 @@ export default function TopicAdder() {
               type="text" />
             <button disabled={isDisabled} >Post Topic</button>
       </form>
-      {/* {(topicMessage) ? <p className="CommentMessage">{topicMessage}</p> : null } */}
     </section>
   )
 }
