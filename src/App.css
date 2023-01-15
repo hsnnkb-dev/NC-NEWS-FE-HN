@@ -112,6 +112,85 @@ h2, h3, h4 {
 }
 
 
+/* ================ Home ================ */
+.Home {
+  padding: 10px;
+  border: 2px solid black;
+  margin: 5px 10px;
+  text-align: left;
+  
+}
+
+.Home span {
+  font-family: 'Bungee shade', cursive;
+  font-weight: bolder;
+}
+
+.Home span:hover {
+  opacity: 85%;
+  cursor: pointer;
+}
+
+/* ================ PostTopic ================ */
+.PostTopicCard {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 8px 10px;
+  text-align: left;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.PostTopicCard:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  background-color: #f1eee6;
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
+.PostTopicCard:hover > h3 {
+  text-decoration: underline;
+}
+
+.TopicAdder {
+  margin-top: 10px;
+  background-color: #FAF9F6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.TopicAdder input {
+  background-color: #ffffff;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 26px;
+  width: 95%;
+}
+
+.TopicAdder input:hover {
+  transform: translateY(1px);
+}
+
+.TopicAdder button {
+  margin: 6px 0 6px 10px;
+  padding: 4px;
+  background-color: #9EE09E;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.TopicAdder button:hover {
+  transform: translateY(1px);
+  cursor: pointer;
+  color: #FAF9F6;
+}
+
+
 /* ================ ArticleList ================ */
 .ArticleList h2 {
   text-align: left;

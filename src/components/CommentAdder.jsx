@@ -37,7 +37,7 @@ export default function CommentAdder({comments, setComments, articleId}) {
           setIsDisabled(false)
         })
         .catch(() => {
-          setCommentMessage(`Failed to post '${commentText}'`);
+          setCommentMessage(`Failed to post '${commentText}, please try again later'`);
           setCommentText("");
           setIsDisabled(false)
         })

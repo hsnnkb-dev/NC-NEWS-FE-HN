@@ -32,6 +32,7 @@ export default function ArticleVote({ article }) {
       toast('You can only vote once', toastStyle);
     }
   }
+  
   return (
     <section className='ArticleVote'>
       <p>Votes: {article.votes + voteShift}</p>

@@ -54,3 +54,10 @@ export const fetchUsers = () => {
           .get(`/users`)
           .then(response => response.data.users)
 }
+
+export const postTopic = (topicTitle, topicDescription) => {
+  const requestBody = { slug: topicTitle, description: topicDescription }
+  return api
+          .post(`/topics`, requestBody)
+          .then(response => response.data.postedTopic)
+}

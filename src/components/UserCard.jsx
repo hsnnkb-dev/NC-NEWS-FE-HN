@@ -1,7 +1,6 @@
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import { toast } from 'react-hot-toast'; 
-import { getByPlaceholderText } from "@testing-library/react";
 
 export default function UserCard({ user }) {
   const { setCurrentUser } = useContext(UserContext);
