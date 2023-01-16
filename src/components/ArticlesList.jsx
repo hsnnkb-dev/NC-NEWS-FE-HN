@@ -67,8 +67,10 @@ export default function ArticlesList() {
             <option value="desc">Descending</option>
           </select>
       </section>
-      
-      {articles.map(article => <ArticleCard article={article} key={article.article_id} />)}
+      {(articles.length) ? 
+        articles.map(article => <ArticleCard article={article} key={article.article_id} />) :
+        <p className='NoArticles'>No articles to display...</p>
+      }
     </main>
   )
 }
