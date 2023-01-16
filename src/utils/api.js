@@ -61,3 +61,16 @@ export const postTopic = (topicTitle, topicDescription) => {
           .post(`/topics`, requestBody)
           .then(response => response.data.postedTopic)
 }
+
+export const postArticle = (articleTitle, articleTopic, articleBody, username) => {
+  const requestBody = { 
+    author: username,
+    title: articleTitle,
+    body: articleBody,
+    topic: articleTopic
+  }
+  
+  return api
+          .post(`/articles`, requestBody)
+          .then(response => response.data.postedArticle)
+}

@@ -47,7 +47,8 @@ export default function CommentAdder({comments, setComments, articleId}) {
   return (
     <section>
       <form className="CommentAdder"onSubmit={event => handleSubmit(event)}>
-            <textarea 
+            <textarea
+              placeholder="Comment body"
               value={commentText} 
               onChange={event => setCommentText(event.target.value)} 
               type="text" />

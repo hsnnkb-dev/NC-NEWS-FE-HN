@@ -19,6 +19,7 @@
 }
 
 h2, h3, h4 {
+  line-height: 1em;
   font-family: 'Bungee', cursive;
   font-weight: 100;
 }
@@ -44,6 +45,7 @@ h2, h3, h4 {
 }
 
 .Header h1 {
+  line-height: 1.2em;
   font-size: 2rem;
   font-family: 'Bungee Shade', cursive;
 }
@@ -98,6 +100,7 @@ h2, h3, h4 {
 
 .Topics h3 {
   margin-left: 2px;
+  margin-bottom: 2px;
   font-weight: 100;
   font-size: 1rem;
 }
@@ -118,10 +121,19 @@ h2, h3, h4 {
   border: 2px solid black;
   margin: 5px 10px;
   text-align: left;
-  
+}
+
+.Home #content {
+  margin: 8px 0;
+}
+
+.Home #or{
+  margin: 8px 0;
+  font-weight: bold;
 }
 
 .Home span {
+  line-height: 1em;
   font-family: 'Bungee shade', cursive;
   font-weight: bolder;
 }
@@ -130,6 +142,7 @@ h2, h3, h4 {
   opacity: 85%;
   cursor: pointer;
 }
+
 
 /* ================ PostTopic ================ */
 .PostTopicCard {
@@ -191,6 +204,80 @@ h2, h3, h4 {
 }
 
 .TopicAdder button:hover {
+  cursor: pointer;
+  color: #FAF9F6;
+}
+
+
+
+/* ================ PostArticle ================ */
+.PostArticleCard {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 8px 10px;
+  text-align: left;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.PostArticleCard:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  background-color: #f1eee6;
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
+.PostArticleCard:hover > h3 {
+  text-decoration: underline;
+}
+
+
+/* ================ ArticleAdderCard ================ */
+.ArticleAdderCard {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 8px 10px;
+  text-align: left;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.ArticleAdder {
+  margin-top: 10px;
+  background-color: #FAF9F6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ArticleAdder input, textarea {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 26px;
+  min-width: 95%;
+  max-width: 95%;
+}
+
+.ArticleAdder textarea {
+  min-width: 95%;
+  max-width: 95%;
+  min-height: 48px;
+}
+
+.ArticleAdder button {
+  margin: 6px 0 6px 10px;
+  padding: 4px;
+  background-color: #9EE09E;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.ArticleAdder button:hover {
   cursor: pointer;
   color: #FAF9F6;
 }
@@ -330,6 +417,7 @@ h2, h3, h4 {
 }
 
 .CommentAdder textarea {
+  font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   margin-left: 10px;
   margin-bottom: 6px;
@@ -337,7 +425,9 @@ h2, h3, h4 {
   border: 2px solid black;
   border-radius: 2px;
   height: 26px;
-  width: 95%;
+  min-width: 95%;
+  max-width: 95%;
+  min-height: 48px;
 }
 
 .CommentAdder button {
@@ -355,10 +445,7 @@ h2, h3, h4 {
 }
 
 .NoComments {
-  padding: 5px;
-  border: 1px solid black;
-  margin: 5px 10px;
-  font-size: 1.2rem;
+  text-align: center;
 }
 
 .CommentMessage {
@@ -412,8 +499,14 @@ h2, h3, h4 {
 .UsersList h2 {
   text-align: left;
   margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: underline;
+}
+
+.UsersList #log-in-message {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* ================ UserCard ================ */
