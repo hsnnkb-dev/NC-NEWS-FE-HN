@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { deleteComment } from "../utils/api";
+import deleteIcon from "../images/control-icons/delete.png";
 
 export default function CommentCard({ comment, setComments }) {
   const { currentUser } = useContext(UserContext);
@@ -27,12 +28,14 @@ export default function CommentCard({ comment, setComments }) {
       <p>User: {comment.author}</p>
       <p>Votes: {comment.votes}</p>
       {(currentUser.username === comment.author) ? 
-        <button 
+        <img 
         disabled={isDisabled}
-        className="DeleteComment"
+        className="DeleteImage"
         onClick={() => handleDelete()}
-        >delete</button> : 
-        null}
+        src={deleteIcon} 
+        alt="Delete comment"
+        /> : null 
+        }
     </article>
   )
 }
