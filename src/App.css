@@ -128,7 +128,7 @@ h2, h3, h4 {
   margin: 8px 0;
 }
 
-.Home #or{
+#or {
   margin: 8px 0;
   font-weight: bold;
 }
@@ -364,7 +364,21 @@ h2, h3, h4 {
 
 
 /* ================ SingleArticle ================ */
+.DeletedArticle {
+  position: relative;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 5px 10px;
+  text-align: left;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.DeletedArticle p {
+  line-height: 20px;
+}
+
 .SingleArticle {
+  position: relative;
   padding: 10px;
   border: 2px solid black;
   margin: 5px 10px;
@@ -564,8 +578,8 @@ h2, h3, h4 {
 /* ================ Controls ================ */
 .DeleteImage {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  right: 8px;
   height: 16px;
   width: 16px;
 }

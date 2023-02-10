@@ -74,3 +74,9 @@ export const postArticle = (articleTitle, articleTopic, articleBody, username) =
           .post(`/articles`, requestBody)
           .then(response => response.data.postedArticle)
 }
+
+export const deleteArticle = (articleId) => {
+  return api
+          .delete(`/articles/${articleId}`)
+          .then(response => console.log(response + "article deleted"));
+}
