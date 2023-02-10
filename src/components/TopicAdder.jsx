@@ -3,6 +3,7 @@ import { TopicContext } from "../contexts/TopicContext";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { postTopic } from "../utils/api";
+import sendIcon from "../images/control-icons/send.png";
 
 export default function TopicAdder() {
   const [ isDisabled, setIsDisabled ] = useState(false);
@@ -59,7 +60,7 @@ export default function TopicAdder() {
               value={topicDescription} 
               onChange={event => setTopicDescription(event.target.value)} 
               type="text" />
-            <button disabled={isDisabled} >Post Topic</button>
+            <button disabled={isDisabled} ><img id="sendIcon" src={sendIcon} alt="post topic" /></button>
       </form>
     </section>
   )

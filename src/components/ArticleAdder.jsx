@@ -3,6 +3,7 @@ import { UserContext } from "../contexts/UserContext";
 import { TopicContext } from '../contexts/TopicContext';
 import { toast } from 'react-hot-toast';
 import { postArticle } from '../utils/api';
+import sendIcon from "../images/control-icons/send.png";
 
 export default function ArticleAdder() {
   const [ isDisabled, setIsDisabled ] = useState(false);
@@ -72,7 +73,8 @@ export default function ArticleAdder() {
               value={articleBody} 
               onChange={event => setArticleBody(event.target.value)} 
               type="text" />
-            <button disabled={isDisabled}>Post Article</button>
+              
+            <button disabled={isDisabled}><img id="sendIcon" src={sendIcon} alt="post article" /></button>
       </form>
     </section>
   )

@@ -3,6 +3,7 @@ import { patchArticleVote } from '../utils/api';
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import toast from 'react-hot-toast';
+import upvoteIcon from "../images/control-icons/upvote.png"
 
 export default function ArticleVote({ article }) {
   const { currentUser } = useContext(UserContext);
@@ -35,9 +36,9 @@ export default function ArticleVote({ article }) {
   
   return (
     <section className='ArticleVote'>
-      <p>Votes: {article.votes + voteShift}</p>
-      <button id="upvote" onClick={() => voteArticle(article.article_id, 1)}>upvote</button>
-      <button id="downvote" onClick={() => voteArticle(article.article_id, -1)}>downvote</button>
+      <img id="upvoteIcon" src={upvoteIcon} alt="upvote" onClick={() => voteArticle(article.article_id, 1)}/>
+      <p>{article.votes + voteShift}</p>
+      <img id="downvoteIcon" src={upvoteIcon} alt="downvote" onClick={() => voteArticle(article.article_id, -1)}/>
       {(voteMessage) ? <p className='VoteMessage'>{voteMessage}</p> : null}
     </section>
   )

@@ -30,9 +30,9 @@ export default function SingleArticle() {
     <main>
       <section className='SingleArticle'>
         <h3>{article.title}</h3>
+        <p id='topic'>{article.topic}</p>
+        <p id='author'>By {article.author}</p>
         <p id='content'>{article.body}</p>
-        <p>Topic - {article.topic}</p>
-        <p>User: {article.author}</p>
         <ArticleVote article={article}/>
       </section>
       <CommentsList comments={comments} setComments={setComments} articleId={article.article_id}/> 
