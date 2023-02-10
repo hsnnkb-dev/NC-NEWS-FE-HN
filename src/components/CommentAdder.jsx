@@ -2,7 +2,8 @@ import { useState } from "react";
 import { postComment } from '../utils/api';
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
-import { toast } from 'react-hot-toast'; 
+import { toast } from 'react-hot-toast';
+import commentIcon from '../images/control-icons/comment.png';
 
 export default function CommentAdder({comments, setComments, articleId}) {
   const [ commentText, setCommentText ] = useState("");
@@ -52,7 +53,8 @@ export default function CommentAdder({comments, setComments, articleId}) {
               value={commentText} 
               onChange={event => setCommentText(event.target.value)} 
               type="text" />
-            <button disabled={isDisabled} >Add Comment</button>
+            <button disabled={isDisabled} ><img id="commentIcon" src={commentIcon} alt="comment" /></button>
+            
       </form>
       {(commentMessage) ? <p className="CommentMessage">{commentMessage}</p> : null }
     </section>
