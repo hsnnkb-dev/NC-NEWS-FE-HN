@@ -4,12 +4,27 @@ const api = axios.create({
   baseURL: "https://yesterdays-news.onrender.com/api"
 })
 
-export const fetchArticles = (topic, sortBy, orderBy) => {
+export const fetchArticlesAmount = (topic, sortBy, orderBy) => {
   const params = { params: 
     { topic: topic, 
       sort_by: sortBy,
-      order: orderBy
-    }}
+      order: orderBy,
+    }
+  }
+  return api
+          .get('/articles', params)
+          .then(response => response.data.total_count);
+}
+
+export const fetchArticles = (topic, sortBy, orderBy, pageNumber) => {
+  const params = { params: 
+    { topic: topic, 
+      sort_by: sortBy,
+      order: orderBy,
+      limit: 5,
+      p: pageNumber
+    }
+  }
   return api
           .get('/articles', params)
           .then(response => response.data.articles);

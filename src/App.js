@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { UserContext } from './contexts/UserContext';
 import { TopicContext } from './contexts/TopicContext';
+import { PageContext } from './contexts/PageContext';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -18,11 +19,13 @@ import profile from "./images/default.jpg";
 function App() {
   const [ currentUser, setCurrentUser ] = useState({ username: "Guest", name: "Guester McGuesterson", avatar_url: profile });
   const [ currentTopics, setCurrentTopics ] = useState([]);
+  const [ currentPage, setCurrentPage ] = useState(1);
   
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }} >
       <TopicContext.Provider value={{ currentTopics, setCurrentTopics }}>
+      <PageContext.Provider value={{ currentPage, setCurrentPage }}>
         <div className="App">
           <Header />
           <Navigation />
@@ -37,9 +40,10 @@ function App() {
             <Route path="/*" element={<NotFoundCard />} />
           </Routes>
           <Toaster
-          position="bottom-center"
+          position="bottom-right"
           reverseOrder={true}/>
         </div>
+      </PageContext.Provider>
       </TopicContext.Provider>
       </UserContext.Provider>
     </BrowserRouter>

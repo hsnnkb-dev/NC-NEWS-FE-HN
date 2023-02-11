@@ -623,7 +623,35 @@ h2, h3, h4 {
 #sendIcon {
   height: 24px;
   width: 24px;
+}
 
+
+.PageNumbers {
+  margin-top: 6px;
+}
+
+.PageNumbers button {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 5px 4px ;
+  font-size: 0.7rem;
+  box-shadow: 0.1rem 0.1rem black;
+}
+
+.PageNumbers button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transform: translateY(3px);
+  background-color: #f1eee6;
+  transition: all 100ms linear;
+  box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
+}
+
+.PageNumbers button:disabled {
+  color: black;
+  cursor: not-allowed;
+  text-decoration: underline;
+  pointer-events: none;
 }
 
 
