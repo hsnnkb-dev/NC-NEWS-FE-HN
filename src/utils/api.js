@@ -42,6 +42,18 @@ export const fetchComments = (articleId) => {
           .then(response => response.data.comments);
 }
 
+export const fetchPaginatedComments = (articleId, pageNumber) => {
+  const params = { params: 
+    { 
+      limit: 5,
+      p: pageNumber
+    }
+  }
+  return api
+          .get(`/articles/${articleId}/comments`, params)
+          .then(response => response.data.comments);
+}
+
 export const patchArticleVote = (articleId, articleVote) => {
   const requestBody = { inc_votes: articleVote }
   return api

@@ -86,7 +86,7 @@ export default function ArticlesList() {
       }
       <section className="PageNumbers">
         <h4>pages</h4>
-         <ArticlePages setCurrentPage={setCurrentPage} currentPage={currentPage} pages={pages}/>
+        <ArticlePages setCurrentPage={setCurrentPage} currentPage={currentPage} pages={pages}/>
       </section>
     </main> 
   )
