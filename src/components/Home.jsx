@@ -1,6 +1,7 @@
 import toast  from "react-hot-toast";
 import PostTopicCard from "./PostTopicCard";
 import PostArticleCard from "./PostArticleCard";
+import Footer from "./Footer";
 
 export default function Home() {
   const toastStyle = {
@@ -59,6 +60,7 @@ export default function Home() {
   }
 
   return (
+    <>
     <main className="Home">
       <h2>home</h2>
       <p id="content">
@@ -72,6 +74,9 @@ export default function Home() {
       <PostArticleCard />
       <p id="or">OR</p>
       <PostTopicCard />
+      
     </main>
+    <Footer />
+    </>
   )
 }

@@ -40,7 +40,7 @@ function App() {
             <Route path="/*" element={<NotFoundCard />} />
           </Routes>
           <Toaster
-          position="bottom-right"
+          position="bottom-center"
           reverseOrder={true}/>
         </div>
       </PageContext.Provider>

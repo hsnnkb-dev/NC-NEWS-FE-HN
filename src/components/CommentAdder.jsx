@@ -5,7 +5,7 @@ import { UserContext } from "../contexts/UserContext";
 import { toast } from 'react-hot-toast';
 import commentIcon from '../images/control-icons/comment.png';
 
-export default function CommentAdder({comments, setComments, articleId}) {
+export default function CommentAdder({setComments, articleId, setMaxComments}) {
   const [ commentText, setCommentText ] = useState("");
   const { currentUser } = useContext(UserContext);
   const [ commentMessage, setCommentMessage ] = useState("");
@@ -33,9 +33,11 @@ export default function CommentAdder({comments, setComments, articleId}) {
       postComment(articleId, commentText, currentUser.username)
         .then(newComment => { 
           setComments(currentComments => [newComment[0], ...currentComments]);
-          setCommentMessage(`Comment '${commentText}' successfully posted!`);
+          toast(`Comment '${commentText}' successfully posted!`, toastStyle);
           setCommentText("");
-          setIsDisabled(false)
+          setIsDisabled(false);
+          setMaxComments(currentMax => currentMax + 1);
+          setCommentMessage(null);
         })
         .catch(() => {
           setCommentMessage(`Failed to post '${commentText}, please try again later'`);

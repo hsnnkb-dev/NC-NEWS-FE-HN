@@ -94,9 +94,14 @@ h2, h3, h4 {
   color: #FAF9F6;
 }
 
+.MainLinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* ================ Topics ================ */
 .Topics {
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 .Topics h3 {
@@ -147,6 +152,7 @@ h2, h3, h4 {
 
 /* ================ PostTopic ================ */
 .PostTopicCard {
+  max-width: 300px;
   padding: 5px;
   border: 2px solid black;
   margin: 8px 10px;
@@ -213,6 +219,7 @@ h2, h3, h4 {
 
 /* ================ PostArticle ================ */
 .PostArticleCard {
+  max-width: 300px;
   padding: 5px;
   border: 2px solid black;
   margin: 8px 10px;
@@ -654,6 +661,12 @@ h2, h3, h4 {
   pointer-events: none;
 }
 
+.Footer {
+  margin: 0 10px;
+  font-size: 0.7rem;
+  padding: 10px 0;
+}
+
 
 /* ================ NotFoundCard ================ */
 .NotFoundCard {
@@ -703,4 +716,10 @@ h2, h3, h4 {
   margin: 5px 10px;
   font-size: 1.2rem;
   box-shadow: 0.2rem 0.2rem black;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
 }
