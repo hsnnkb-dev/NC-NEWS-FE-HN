@@ -48,7 +48,7 @@ export default function SingleArticle() {
     <section className='DeletedArticle'>
       <p>Successfully deleted the article. You can navigate to more content using the links above!</p>
       <p id="or">OR</p>
-      <PostArticleCard></PostArticleCard>
+      <PostArticleCard />
     </section>
   )
 
