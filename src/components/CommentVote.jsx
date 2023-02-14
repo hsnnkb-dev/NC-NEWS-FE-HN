@@ -36,9 +36,9 @@ export default function CommentVote({ comment }) {
   
   return (
     <section className='CommentVote'>
-      <img id="upvoteIcon" src={upvoteIcon} alt="upvote" onClick={() => voteComment(comment.comment_id, 1)}/>
+      <img className="upvoteIcon" src={upvoteIcon} alt="upvote" onClick={() => voteComment(comment.comment_id, 1)}/>
       <p>{comment.votes + voteShift}</p>
-      <img id="downvoteIcon" src={upvoteIcon} alt="downvote" onClick={() => voteComment(comment.comment_id, -1)}/>
+      <img className="downvoteIcon" src={upvoteIcon} alt="downvote" onClick={() => voteComment(comment.comment_id, -1)}/>
       {(voteMessage) ? <p className='VoteMessage'>{voteMessage}</p> : null}
     </section>
   )

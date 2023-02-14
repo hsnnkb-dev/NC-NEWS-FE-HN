@@ -54,7 +54,7 @@ export default function ArticleAdder() {
   } 
 
   return (
-    <section className="ArticleAdderCard">
+    <main className="ArticleAdderCard">
       <h2>Post an Article</h2>
       <form className="ArticleAdder" onSubmit={event => handleSubmit(event)}>
             <input
@@ -76,6 +76,6 @@ export default function ArticleAdder() {
               
             <button disabled={isDisabled}><img id="sendIcon" src={sendIcon} alt="post article" /></button>
       </form>
-    </section>
+    </main>
   )
 }

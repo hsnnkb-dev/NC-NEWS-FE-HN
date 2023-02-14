@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Yesterday's News Website 📰
+===========================================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Click the link 🔗 below to see the project in action 🚀!
 
-## Available Scripts
+https://yesterdays-news-hn.netlify.app
 
-In the project directory, you can run:
+Hosted using Netlify.
 
-### `npm start`
+## Project Summary
+Yesterday's News is a well-designed, content-focussed article website with reddit-like functionality. Users can view articles and associated comments, and also have the ability to view articles from particular topics and sort based on date, title, user, and votes. Once logged-in, users can post their own articles, topics and comments. Logged-in users can also show their support (or dissent) by voting on each of the articles and comments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website features a fun, modern design that works well on both mobile screens and desktop displays. Developed using the React library, React Hooks, and best practices ranging from SOLID to the WC Accessibility Guidelines.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Try it out by exploring the website for yourself!  
+Here's a tutorial if you get stuck ➡️ https://github.com/hsnnkb-dev/NC-NEWS-FE-HN/blob/main/TUTORIAL.md!
 
-### `npm test`
+### Project Backend
+This project utilised a REST API developed with Express, Node and SQL which I also wrote a few weeks prior.
+Hosted using Elephant SQL and Render, the backend project can be found here ⬇️!  
+https://github.com/hsnnkb-dev/NC-NEWS-HN
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Quick-start for Developers 💻
+### Project requirements
+#### Minimum Node version
+- Node.js v19+
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### npm package list
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ | Dependencies |
+ | :--- |
+ | axios |
+ | react |
+ | react-dom |
+ | react-hot-toast |
+ | react-router-dom |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+Installed on your machine:
+- Git
+- Node
+- Node Package Manager
 
-### `npm run eject`
+### Setting up the Project 🔧
+Within your terminal input the following commands.
+ 1. Clone the project using `https://github.com/hsnnkb-dev/NC-NEWS-FE-HN.git` .
+ 2. `cd` into the root of the project.
+ 3. Use `npm install` which installs all package dependencies (see list of npm packages above).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Starting up the Project 🏁
+Within your terminal input the following command.
+ 1. `cd` into the root of the project.
+ 2.  Use `npm start` which should open up a local instance of Yesterday's News within your browser.
+If all has gone well you should be able to interact with the site on localhost:3000!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Next Steps & Contact Me 🎉
+Hopefully, the project should be up and running and you should be free to do whatever you would like with it. You can also contact me at hsnnkb.dev@gmail.com 📫!

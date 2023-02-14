@@ -14,7 +14,7 @@ export default function Topics() {
 
   return (
     <section className='Topics'>
-      <h3>Topics</h3>
+      <p className='TopicsTitle'>Topics</p>
       <article>
         {currentTopics.map( topic => {
           return <Link 
