@@ -45,20 +45,20 @@ export default function SingleArticle() {
   if (isError) return <p className="Error">404 - Article not found</p>
   if (isLoading) return <p className="Loading">Loading content</p>
   if (isArticleDeleted) return (
-    <section className='DeletedArticle'>
+    <main className='DeletedArticle'>
       <p>Successfully deleted the article. You can navigate to more content using the links above!</p>
       <p id="or">OR</p>
       <PostArticleCard />
-    </section>
+    </main>
   )
 
   return (
     <main>
       <section className='SingleArticle'>
-        <h3>{article.title}</h3>
-        <p id='topic'>{article.topic}</p>
-        <p id='author'>By {article.author}</p>
-        <p id='content'>{article.body}</p>
+        <h2>{article.title}</h2>
+        <p className='topic'>{article.topic}</p>
+        <p className='author'>By {article.author}</p>
+        <p className='content'>{article.body}</p>
         <ArticleVote article={article}/>
         {(currentUser.username === article.author) ? 
         <img 

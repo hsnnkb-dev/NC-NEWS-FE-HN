@@ -47,7 +47,7 @@ export default function TopicAdder() {
 
 
   return (
-    <section className="TopicAdderCard">
+    <main className="TopicAdderCard">
       <h2>Post a Topic</h2>
       <form className="TopicAdder" onSubmit={event => handleSubmit(event)}>
             <input
@@ -62,6 +62,6 @@ export default function TopicAdder() {
               type="text" />
             <button disabled={isDisabled} ><img id="sendIcon" src={sendIcon} alt="post topic" /></button>
       </form>
-    </section>
+    </main>
   )
 }

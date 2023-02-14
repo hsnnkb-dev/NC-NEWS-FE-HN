@@ -37,7 +37,7 @@ export default function CommentsList({ comments, setComments, articleId}) {
       <section className='PageNumbers'>
         <h4>pages</h4>
         {(comments.length) ? commentPages.map(page => {
-            return <button onClick={(event) => handlePageChange(event)} value={page} disabled={parseInt(currentPage) === page}>{page}</button>
+            return <button onClick={(event) => handlePageChange(event)} value={page} disabled={parseInt(currentPage) === page} key={page}>{page}</button>
           }) : <button onClick={(event) => handlePageChange(event)} value={1} disabled={true}>1</button>}
       </section>
     </section>

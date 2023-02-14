@@ -6,7 +6,7 @@ export default function PostArticleCard() {
 
   return (
     <section className="PostArticleCard" onClick={() => navigateToPostArticle()}>
-      <h3>Post an Article</h3>
+      <h2>Post an Article</h2>
     </section>
   )
 }

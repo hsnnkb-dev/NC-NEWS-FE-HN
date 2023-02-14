@@ -60,7 +60,7 @@ export default function ArticlesList() {
       {(topic) ? <h2>{topic} Articles</h2> : <h2>All Articles</h2>}
       <section className="SortAndOrder">
         <select 
-          name="" 
+          aria-label="sort-by" 
           id="sort-by" 
           defaultValue={sortBy}
           onChange={(event) => handleSort(event)}>
@@ -71,8 +71,8 @@ export default function ArticlesList() {
           <option value="votes">Votes</option>
         </select>
         <select 
-          name="" 
-          id=""
+          aria-label="order-by" 
+          id="order-by"
           defaultValue={orderBy}
           onChange={(event) => handleOrder(event)}>
             <option disabled>Order By</option>

@@ -39,8 +39,8 @@ export default function CommentCard({ comment, setComments, setMaxComments, setC
 
   return (
     <article className="CommentCard">
-      <p id='content'>{comment.body}</p>
-      <p id='author'>By {comment.author}</p>
+      <p className='content'>{comment.body}</p>
+      <p className='author'>By {comment.author}</p>
       <CommentVote comment={comment}/>
       {(currentUser.username === comment.author) ? 
         <img 

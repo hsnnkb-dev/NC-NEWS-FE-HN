@@ -5,7 +5,7 @@ export default function ArticlePages({ pages, setCurrentPage, currentPage }) {
 
   return (
     pages.map(page => {
-        return <button onClick={(event) => handlePageChange(event)} value={page} disabled={parseInt(currentPage) === page}>{page}</button> 
+        return <button onClick={(event) => handlePageChange(event)} value={page} disabled={parseInt(currentPage) === page} key={page}>{page}</button> 
     })
   )
 }

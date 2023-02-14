@@ -36,9 +36,9 @@ export default function ArticleVote({ article }) {
   
   return (
     <section className='ArticleVote'>
-      <img id="upvoteIcon" src={upvoteIcon} alt="upvote" onClick={() => voteArticle(article.article_id, 1)}/>
+      <img className="upvoteIcon" src={upvoteIcon} alt="upvote" onClick={() => voteArticle(article.article_id, 1)}/>
       <p>{article.votes + voteShift}</p>
-      <img id="downvoteIcon" src={upvoteIcon} alt="downvote" onClick={() => voteArticle(article.article_id, -1)}/>
+      <img className="downvoteIcon" src={upvoteIcon} alt="downvote" onClick={() => voteArticle(article.article_id, -1)}/>
       {(voteMessage) ? <p className='VoteMessage'>{voteMessage}</p> : null}
     </section>
   )

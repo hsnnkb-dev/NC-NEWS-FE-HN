@@ -104,7 +104,8 @@ h2, h3, h4 {
   margin: 8px 0;
 }
 
-.Topics h3 {
+.TopicsTitle {
+  font-family: 'Bungee', cursive;
   margin-left: 2px;
   margin-bottom: 2px;
   font-weight: 100;
@@ -160,6 +161,10 @@ h2, h3, h4 {
   box-shadow: 0.2rem 0.2rem black;
 }
 
+.PostTopicCard h2 {
+  font-size: 1.1rem;
+}
+
 .PostTopicCard:hover {
   cursor: pointer;
   transform: translateY(3px);
@@ -168,7 +173,7 @@ h2, h3, h4 {
   box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
 }
 
-.PostTopicCard:hover > h3 {
+.PostTopicCard:hover > h2 {
   text-decoration: underline;
 }
 
@@ -227,6 +232,10 @@ h2, h3, h4 {
   box-shadow: 0.2rem 0.2rem black;
 }
 
+.PostArticleCard h2 {
+  font-size: 1.1rem;
+}
+
 .PostArticleCard:hover {
   cursor: pointer;
   transform: translateY(3px);
@@ -235,7 +244,7 @@ h2, h3, h4 {
   box-shadow: 0.05rem 0.05rem rgb(25, 23, 23);
 }
 
-.PostArticleCard:hover > h3 {
+.PostArticleCard:hover > h2 {
   text-decoration: underline;
 }
 
@@ -370,13 +379,13 @@ h2, h3, h4 {
   margin-left: 4px;
 }
 
-.CommentVote #upvoteIcon {
+.CommentVote .upvoteIcon {
   height: 14px;
   width: 14px;
   margin: 3px 0;
 }
 
-.CommentVote #downvoteIcon {
+.CommentVote .downvoteIcon {
   height: 14px;
   width: 14px;
   margin: 3px 0;
@@ -406,7 +415,7 @@ h2, h3, h4 {
   box-shadow: 0.2rem 0.2rem black;
 }
 
-.SingleArticle h3 {
+.SingleArticle h2 {
   font-size: 1.5rem;
   text-decoration: underline;
   width: 95%;
@@ -434,17 +443,17 @@ h2, h3, h4 {
   color: #FAF9F6;
 }
 
-.SingleArticle #topic {
+.SingleArticle .topic {
   margin: 2px 0 0 0;
   font-weight: bold;
 }
 
-.SingleArticle #author {
+.SingleArticle .author {
   font-size: 0.8rem;
   font-style: italic;
 }
 
-.SingleArticle #content {
+.SingleArticle .content {
   margin: 10px 0;
 }
 
@@ -529,12 +538,12 @@ h2, h3, h4 {
   line-height: 16px;
 }
 
-.CommentCard #content {
+.CommentCard .content {
   margin-bottom: 2px;
   width: 85%;
 }
 
-.CommentCard #author {
+.CommentCard .author {
   font-style: italic;
   font-size: 0.7rem;
   margin-bottom: 4px;
@@ -616,26 +625,26 @@ h2, h3, h4 {
   transition: all 100ms linear;
 }
 
-#upvoteIcon {
+.upvoteIcon {
   height: 16px;
   width: 16px;
   margin: 4px 0;
 }
 
-#upvoteIcon:hover {
+.upvoteIcon:hover {
   cursor: pointer;
   transform: translateY(-1px);
   transition: all 100ms linear;
 }
 
-#downvoteIcon {
+.downvoteIcon {
   height: 16px;
   width: 16px;
   margin: 4px 0;
   transform: rotate(180deg);
 }
 
-#downvoteIcon:hover {
+.downvoteIcon:hover {
   cursor: pointer; 
   transform: rotate(180deg) translateY(-1px);
   transition: all 100ms linear;

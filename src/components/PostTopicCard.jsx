@@ -6,7 +6,7 @@ export default function PostTopicCard() {
 
   return (
     <section className="PostTopicCard" onClick={() => navigateToPostTopic()}>
-      <h3>Post a Topic</h3>
+      <h2>Post a Topic</h2>
     </section>
   )
 }
