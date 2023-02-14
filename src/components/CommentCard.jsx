@@ -3,6 +3,7 @@ import { UserContext } from "../contexts/UserContext";
 import { toast } from 'react-hot-toast';
 import { deleteComment } from "../utils/api";
 import deleteIcon from "../images/control-icons/delete.png";
+import CommentVote from "./CommentVote"
 
 export default function CommentCard({ comment, setComments, setMaxComments, setCurrentPage }) {
   const { currentUser } = useContext(UserContext);
@@ -39,8 +40,8 @@ export default function CommentCard({ comment, setComments, setMaxComments, setC
   return (
     <article className="CommentCard">
       <p id='content'>{comment.body}</p>
-      <p>By {comment.author}</p>
-      <p>{comment.votes}</p>
+      <p id='author'>By {comment.author}</p>
+      <CommentVote comment={comment}/>
       {(currentUser.username === comment.author) ? 
         <img 
         disabled={isDisabled}

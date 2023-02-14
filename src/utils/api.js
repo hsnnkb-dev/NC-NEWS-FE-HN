@@ -61,6 +61,13 @@ export const patchArticleVote = (articleId, articleVote) => {
           .then(response => response.data.updatedArticle);
 }
 
+export const patchCommentVote = (commentId, commentVote) => {
+  const requestBody = { inc_votes: commentVote }
+  return api
+          .patch(`/comments/${commentId}`, requestBody)
+          .then(response => response.data.updatedComment);
+}
+
 export const postComment = (articleId, commentText, username) => {
   const requestBody = { username: username, body: commentText }
   return api
