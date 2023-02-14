@@ -356,17 +356,30 @@ h2, h3, h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 3%;
+  width: 10px;
+  margin-left: 4px;
+  font-weight: bold;
 }
 
-.ArticleVote #upvote {
-  border: 2px solid black;
-  background-color: #FEB144;
+.CommentVote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10px;
+  font-weight: bold;
+  margin-left: 4px;
 }
 
-.ArticleVote #downvote {
-  border: 2px solid black;
-  background-color: #9EC1CF;
+.CommentVote #upvoteIcon {
+  height: 14px;
+  width: 14px;
+  margin: 3px 0;
+}
+
+.CommentVote #downvoteIcon {
+  height: 14px;
+  width: 14px;
+  margin: 3px 0;
 }
 
 
@@ -517,8 +530,14 @@ h2, h3, h4 {
 }
 
 .CommentCard #content {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   width: 85%;
+}
+
+.CommentCard #author {
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-bottom: 4px;
 }
 
 .CommentCard .DeleteComment {
